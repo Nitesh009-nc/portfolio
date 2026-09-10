@@ -1,0 +1,17 @@
+baseURL = '/'
+# For GitHub Pages project site, change to: 'https://nitesh2426.github.io/portfolio/'
+locale = 'en-us'
+title = 'Nitesh Kumar | Python Developer'
+
+[params]
+  name = 'Nitesh Kumar'
+  role = 'Python Developer @ TCS'
+  tagline = 'Python Backend Developer building scalable REST APIs with FastAPI, Firestore & AWS'
+  email = 'nitteshku246@gmail.com'
+  location = 'Kolkata, India'
+  linkedin = 'https://www.linkedin.com/in/chauhannitesh/'
+  github = 'https://github.com/Nitesh009-nc'
+  hackerrank = 'https://hackerrank.com/nitesh2426'
+  resume = '/resume.pdf'
+  availability = 'Open to backend / Python opportunities'
+  description = 'Portfolio of Nitesh Kumar, Python Backend Developer at TCS specializing in FastAPI, REST APIs, Firestore and AWS.'

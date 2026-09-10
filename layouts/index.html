@@ -1,0 +1,249 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="container hero-grid">
+    <div class="reveal">
+      <p class="hero-badge"><span class="dot"></span> {{ .Site.Params.availability }}</p>
+      <p class="eyebrow">Hello, I'm</p>
+      <h1 class="hero-title">{{ .Site.Params.name }}<span class="gold-gradient">.</span></h1>
+      <h2 class="hero-role">{{ .Site.Params.role }}</h2>
+      <p class="hero-lead">{{ .Site.Params.tagline }}</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#projects">View Work <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="{{ "resume.pdf" | relURL }}" target="_blank" rel="noopener">Download Resume</a>
+      </div>
+      <div class="hero-meta">
+        <span>{{ .Site.Params.location }}</span>
+        <span class="sep">·</span>
+        <span>{{ .Site.Params.email }}</span>
+      </div>
+    </div>
+    <div class="reveal delay-1">
+      <div class="glass-card">
+        {{ $p := resources.Get "images/profile.png" }}
+        {{ $p = $p.Fill "520x520 Top" }}
+        <img class="profile-ring" src="{{ $p.RelPermalink }}" alt="Nitesh Kumar" width="520" height="520" fetchpriority="high" />
+        <p class="glass-title">FastAPI · Firestore · AWS</p>
+        <p class="glass-sub">REST APIs · Pydantic · JWT · pytest · Postman · GitLab CI/CD</p>
+        <div class="stats">
+          <div><strong>1.5+</strong><span>yrs @ TCS</span></div>
+          <div><strong>8.50</strong><span>DGPA B.Tech</span></div>
+          <div><strong>3</strong><span>certificates</span></div>
+        </div>
+        <div class="glass-links">
+          <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">GitHub</a>
+          <a href="{{ .Site.Params.hackerrank }}" target="_blank" rel="noopener">HackerRank</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="container hero-strip-inner">
+      <span>Python</span><i>◆</i><span>FastAPI</span><i>◆</i><span>Firestore</span><i>◆</i><span>AWS</span><i>◆</i><span>Pydantic</span><i>◆</i><span>JWT</span><i>◆</i><span>pytest</span>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container about-grid">
+    <div class="reveal">
+      <h3 class="section-title">Profile <span>Summary</span></h3>
+      <p class="quote-card">Python Backend Developer with hands-on experience in building scalable REST APIs using FastAPI and Python, integrating Firestore for data persistence, and managing code through GitLab CI/CD workflows. Familiar with AWS services and cloud-based application deployment.</p>
+    </div>
+    <div class="reveal delay-1">
+      <div class="fact-card">
+        <h4>Quick facts</h4>
+        <ul>
+          <li><strong>Role</strong><span>Python Backend Developer, TCS</span></li>
+          <li><strong>Location</strong><span>Kolkata, India</span></li>
+          <li><strong>Focus</strong><span>REST APIs · Firestore · AWS</span></li>
+          <li><strong>Contact</strong><span>{{ .Site.Params.email }}</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section alt">
+  <div class="container">
+    <h3 class="section-title reveal">Work <span>Experience</span></h3>
+    <div class="timeline reveal">
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-head">
+            <div><strong>Tata Consultancy Services</strong><br /><em>Python Backend Developer</em></div>
+            <div class="badge">Apr 2025 – Present · Kolkata</div>
+          </div>
+          <ul class="check-list">
+            <li>Designed and developed RESTful APIs using Python and FastAPI, implementing request validation, error handling, and structured response models.</li>
+            <li>Integrated Google Firestore for data storage, handling CRUD operations, document modeling, and efficient data retrieval.</li>
+            <li>Collaborated using Git-based workflows, supported API testing and debugging, and followed best practices for scalable, maintainable backends.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-head">
+            <div><strong>HSR Hi-Tech Solutions</strong><br /><em>Frontend Developer</em></div>
+            <div class="badge">Jan 2024 – Jun 2024 · Haldia</div>
+          </div>
+          <ul class="check-list">
+            <li>Developed frontend solutions to enhance user experiences and optimize website functionality.</li>
+            <li>Built responsive interfaces and collaborated on improving usability across pages.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-head">
+            <div><strong>LinuxWorld Informatics Pvt Ltd</strong><br /><em>AWS Intern</em></div>
+            <div class="badge">Jul 2023 – Sep 2023 · Jaipur</div>
+          </div>
+          <ul class="check-list">
+            <li>Gained hands-on experience with AWS services and cloud-native concepts on real-world tasks.</li>
+            <li>Collaborated with the team to explore cloud technologies and solve practical challenges.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-head">
+            <div><strong>Whizzo Infotech Pvt. Ltd</strong><br /><em>React Developer</em></div>
+            <div class="badge">Jan 2023 – Mar 2023 · Haldia</div>
+          </div>
+          <ul class="check-list">
+            <li>Built interactive user interfaces with React, gaining hands-on experience with component-driven development.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section dark">
+  <div class="container">
+    <h3 class="section-title light reveal">Featured <span>Projects</span></h3>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="tags"><span>Python</span><span>FastAPI</span><span>Firestore</span><span>GCP</span><span>Postman</span></div>
+        <h4>Cloud Marketplace Platform <em>(Backend Development)</em></h4>
+        <p class="muted-light">Multi-cloud marketplace backend supporting GCP, AWS, and Azure services.</p>
+        <ul class="check-list">
+          <li>Developed and maintained backend RESTful APIs using Python and FastAPI for a multi-cloud marketplace platform.</li>
+          <li>Implemented CRUD operations with Google Firestore, designing document-based data models for efficient storage and retrieval.</li>
+          <li>Created and tested API endpoints using Postman, validating request/response flows, authentication behavior, and edge cases.</li>
+          <li>Debugged backend issues by analyzing logs, identifying root causes, and applying fixes for stable, reliable services.</li>
+        </ul>
+      </div>
+      <div class="project-card reveal delay-1">
+        <div class="tags"><span>Python</span><span>FastAPI</span><span>SQL</span><span>Redis</span><span>Pydantic</span><span>pytest</span></div>
+        <h4>SnapLink <em>(URL Shortener API)</em></h4>
+        <p class="muted-light">High-performance link-shortening backend with cached redirects and click analytics.</p>
+        <ul class="check-list">
+          <li>Built POST /shorten and GET /{code} endpoints with Base62 code generation, custom aliases, collision retry, and Pydantic URL validation.</li>
+          <li>Added Redis read-through cache for fast redirects plus link expiry (TTL) and sliding-window rate limiting.</li>
+          <li>Recorded per-click analytics (timestamp, referrer, device) via async background tasks without blocking redirects.</li>
+          <li>Covered endpoints with a pytest suite and validated flows in Postman, including auth and edge cases.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="container">
+    <h3 class="section-title reveal">Skills &amp; <span>Tools</span></h3>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-head"><div class="skill-icon">◆</div>
+        <h4>Backend</h4></div>
+        <div class="pill-grid">
+          <span>Python</span><span>FastAPI</span><span>REST APIs</span><span>Pydantic</span><span>Async Programming</span><span>pytest</span>
+        </div>
+      </div>
+      <div class="skill-card reveal delay-1">
+        <div class="skill-head"><div class="skill-icon">◆</div>
+        <h4>Data &amp; Caching</h4></div>
+        <div class="pill-grid">
+          <span>SQL</span><span>Firestore</span><span>Redis Basics</span><span>SQLAlchemy</span>
+        </div>
+      </div>
+      <div class="skill-card reveal delay-1">
+        <div class="skill-head"><div class="skill-icon">◆</div>
+        <h4>Cloud &amp; DevOps</h4></div>
+        <div class="pill-grid">
+          <span>AWS (EC2 · S3 · IAM)</span><span>GCP Basics</span><span>Docker</span><span>Git</span><span>GitLab CI/CD</span><span>GitHub</span>
+        </div>
+      </div>
+      <div class="skill-card reveal delay-2">
+        <div class="skill-head"><div class="skill-icon">◆</div>
+        <h4>Security &amp; Workflow</h4></div>
+        <div class="pill-grid">
+          <span>JWT Authentication</span><span>API Security</span><span>Postman</span><span>VSCode</span><span>Slack</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certificates" class="section alt">
+  <div class="container">
+    <h3 class="section-title reveal">Certi<span>ficates</span></h3>
+    <div class="grid3">
+      <div class="cert-card reveal"><div class="cert-icon">◆</div><strong>Digital: Python Advanced</strong><p class="muted">TCS</p></div>
+      <div class="cert-card reveal delay-1"><div class="cert-icon">◆</div><strong>AWS Solution Architect Training</strong><p class="muted">Trainocate India</p></div>
+      <div class="cert-card reveal delay-2"><div class="cert-icon">◆</div><strong>Architecting Agentic AI Business Solutions</strong><p class="muted">Microsoft · Aug 2026</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="languages" class="section">
+  <div class="container">
+    <h3 class="section-title reveal">Lang<span>uages</span></h3>
+    <div class="grid3">
+      <div class="cert-card reveal"><div class="cert-icon">◆</div><strong>Hindi</strong><p class="muted">Native or Bilingual</p></div>
+      <div class="cert-card reveal delay-1"><div class="cert-icon">◆</div><strong>English</strong><p class="muted">Full Professional</p></div>
+      <div class="cert-card reveal delay-2"><div class="cert-icon">◆</div><strong>Bengali</strong><p class="muted">Professional Working</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section">
+  <div class="container edu-grid">
+    <div class="reveal">
+      <h3 class="section-title">Educa<span>tion</span></h3>
+      <div class="edu-card">
+        <div class="t-head">
+          <div><strong>B.Tech in Computer Science &amp; Engineering</strong><br /><em>Haldia, West Bengal (DGPA: 8.50)</em></div>
+          <div class="badge">Aug 2020 – Jun 2024</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal delay-1">
+      <h3 class="section-title">Volun<span>teer</span></h3>
+      <div class="edu-card gold-edge">
+        <strong>Volunteer – TCS HOPE Program</strong>
+        <p class="muted">Community and social responsibility initiatives — teamwork, responsibility, and engagement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <div class="container center">
+    <h3 class="section-title light reveal">Let's <span>Connect</span></h3>
+    <p class="contact-lead reveal">Open to backend / Python opportunities and collaborations.</p>
+    <div class="cta center-cta reveal">
+      <p class="contact-email">{{ .Site.Params.email }}</p>
+      <a class="btn btn-ghost-light" href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost-light" href="{{ .Site.Params.github }}" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost-light" href="{{ .Site.Params.hackerrank }}" target="_blank" rel="noopener">HackerRank</a>
+    </div>
+  </div>
+</section>
+{{ end }}
