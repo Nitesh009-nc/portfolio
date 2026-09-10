@@ -1,5 +1,4 @@
-baseURL = '/'
-# For GitHub Pages project site, change to: 'https://nitesh2426.github.io/portfolio/'
+baseURL = 'https://nitesh009-nc.github.io/portfolio/'
 locale = 'en-us'
 title = 'Nitesh Kumar | Python Developer'
 
