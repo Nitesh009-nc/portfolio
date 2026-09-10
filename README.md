@@ -32,9 +32,9 @@ hugo --minify
 ## Deployment
 
 Every push to `master` auto-deploys via GitHub Actions (`.github/workflows/deploy.yml`):
-build with Hugo extended → upload `public/` → deploy to GitHub Pages.
+build with Hugo extended → publish `public/` to the `gh-pages` branch.
 
-One-time setup in the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+One-time setup in the repo: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `gh-pages` / `(root)`**.
 
 ## Structure
 
